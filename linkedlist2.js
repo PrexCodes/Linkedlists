@@ -1,42 +1,42 @@
 const { log } = require("console");
 
 class Node{
-    constructor(val){
-        this.next = null;
-        this.val = val
+    constructor(valss){
+        this.nexts = null;
+        this.valss = valss
     }
 }
 
 
 class Linkedlist{
     constructor(){
-        this.head = null;
-        this.tail = null;
+        this.headss = null;
+        this.tailss = null;
         this.length = 0;
     }
-    addList(val){
-        let node = new Node(val);
-        if(!this.head){
-            this.head = node;
-            this.tail = this.head
+    addList(valss){
+        let node = new Node(valss);
+        if(!this.headss){
+            this.headss = node;
+            this.tailss = this.headss
         }else{
-            this.tail.next = node;
-            this.tail = node;
+            this.tailss.nexts = node;
+            this.tailss = node;
         }
         this.length++
         return this;
     }
 
     remove(){
-        if(!this.head){
+        if(!this.headss){
             return undefined
         }else{
-            let current = this.tail;
-            let newTail = current
+            let current = this.tailss;
+            let newtailss = current
 
-            while(current.next){
-                this.tail = newTail;
-                this.tail.next = null;
+            while(current.nexts){
+                this.tailss = newtailss;
+                this.tailss.nexts = null;
             }
             this.length--
             return current;
