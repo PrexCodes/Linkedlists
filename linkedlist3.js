@@ -12,8 +12,8 @@ class Welcome{
         this.length = 0;
     }
 
-    create(){
-        let node = new Bonjour();
+    create(params){
+        let node = new Bonjour(params);
         if(!this.hed){
             this.hed = node;
             this.tel = this.hed
